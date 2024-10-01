@@ -1,0 +1,105 @@
+/* src/App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Counter Container */
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e45e2, #88d3ce);
+  color: #fff;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.counter-container:hover {
+  background: linear-gradient(135deg, #88d3ce, #6e45e2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Counter Value */
+.counter-value {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffeb3b;
+  transition: transform 0.4s ease;
+}
+
+.counter-value:hover {
+  transform: scale(1.1);
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons button {
+  font-size: 1.2rem;
+  margin: 10px;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  background: #ffeb3b;
+  color: #333;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:hover {
+  background-color: #ffc107;
+  transform: translateY(-5px);
+}
+
+.buttons button:active {
+  transform: translateY(2px);
+}
+
+/* Special Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.counter-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .counter-container {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .counter-value {
+    font-size: 3.5rem;
+  }
+
+  .buttons button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
